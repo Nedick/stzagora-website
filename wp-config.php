@@ -18,13 +18,13 @@
 $url = parse_url(getenv('DATABASE_URL') ? getenv('DATABASE_URL') : getenv('CLEARDB_DATABASE_URL'));
 
 /** The name of the database for WordPress */
-define('DB_NAME', trim($url['path'], '/'));
+define('DB_NAME', trim($url['wordpress'], '/'));
 
 /** MySQL database username */
-define('DB_USER', $url['user']);
+define('DB_USER', $url['wordpressuser']);
 
 /** MySQL database password */
-define('DB_PASSWORD', $url['pass']);
+define('DB_PASSWORD', $url['wordpress']);
 
 /** MySQL hostname */
 define('DB_PASSWORD', $url['host']);
